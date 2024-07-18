@@ -7,3 +7,39 @@
 input {
     outline: none;
 }
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.categories_wrapper::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+    height: 8px; /* Set the height of the scrollbar (for horizontal scrollbars) */
+}
+
+.categories_wrapper::-webkit-scrollbar-track {
+    background: transparent; /* Make the track background transparent */
+}
+
+.categories_wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Darker color for the scrollbar thumb */
+    border-radius: 10px; /* Round the corners of the scrollbar thumb */
+}
+
+.categories_wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Darker on hover */
+}
+
+.categories_wrapper::-webkit-scrollbar-thumb:active {
+    background-color: rgba(0, 0, 0, 0.4); /* Darker when active */
+}
+
+.categories_wrapper::-webkit-scrollbar-corner {
+    background: transparent; /* Make the corner background transparent */
+}
+  

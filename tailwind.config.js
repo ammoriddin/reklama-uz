@@ -16,6 +16,8 @@ module.exports = {
         borderColor: '#EEEEEE',
         navbarBackground: '#F5F5F5',
         lightPurple: '#F8F2FF',
+        hrColor: '#EFEFEF',
+        secondary: '#121212',
       },
       fontFamily: {
         onest: ['Onest', 'sans-serif'],

@@ -12,7 +12,7 @@ const Navbar = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const handleRouteChange = (url) => {
-        if (url.startsWith('/login')) {
+        if (url.startsWith('/login') || url.startsWith('/register')) {
           setShowNavbar(false)
         } else {
           setShowNavbar(true)

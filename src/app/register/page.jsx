@@ -1,33 +1,51 @@
-"use server"
+"use client"
 
-import Image from 'next/image'
-import React from 'react'
-import Form from './(form)'
-import Link from 'next/link'
 import { Icons } from '@/icons'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import Form from './(form)'
+import Image from 'next/image'
+import RegisterSteps from './(register-steps)'
+import Verification from './(verificaton)'
+import LastStep from './(last-step)'
 
-const Page = () => {
+const page = () => {
+  const [step, setStep] = useState(0)
 
   return (
-    <section className='flex justify-between'>
+    <section className='flex'>
 
         {/* Left Section */}
-        <section className='flex flex-col px-[150px] justify-between pb-[30px] w-[55%]'>
-            <Link href={'/'} className='flex gap-[10px] mt-[15px] items-center'>
+        <section className='flex flex-col px-[150px] pb-[30px] w-[55%]'>
+            <Link href={'/'} className='flex gap-[10px] mb-[40px] mt-[15px] items-center'>
               <Icons.logo width='42px' height='42px' />
               <h1 className='text-black text-[1.5rem] font-[800] leading-normal font-onest'>onest</h1>
             </Link>
 
-            <div>
-                <h1 className='text-black text-[2.625rem] font-[500] leading-normal mb-[12px]'>Login page</h1>
-                <p className='text-black/30 text-[1rem] font-[400] leading-normal mb-[43px]'>Dont have an accaunt, <Link href={'/register'} className='text-purple'>register</Link></p>
-                <Form />
+            {/* Register Steps */}
+            <div className='mb-[65px]'>
+              <RegisterSteps step_counts={[0, 1, 2]} stepin={step} />
             </div>
 
-            <div>
-              <p className='text-purple text-[0.813rem] font-[400] leading-normal underline mb-[8px]'>Для SMM-менеджеров</p>
-              <p className='text-primary text-[0.813rem] font-[400] leading-normal mb-[22px]'>Для предприятия</p>
+            {
+              step === 0 &&
+              <div className='flex-grow-[1]'>
+                <h1 className='text-black text-[2.625rem] font-[500] leading-normal mb-[12px]'>Register page</h1>
+                <p className='text-black/30 text-[1rem] font-[400] leading-normal mb-[33px]'>Alredy have an accaunt, <Link href={'/login'} className='text-purple'>login</Link></p>
+                <Form setStep={setStep} />
+              </div>
+            }
 
+            {
+              step === 1 &&
+              <Verification setStep={setStep} />
+            }
+
+            {
+              step === 2 &&
+              <LastStep />
+            }
+            <div>
               <div className='flex gap-[20px] mb-[14px]'>
                 <Link href={'/help'} className='text-primary text-[0.813rem] font-[400] leading-normal'>
                   Help
@@ -59,4 +77,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default page
