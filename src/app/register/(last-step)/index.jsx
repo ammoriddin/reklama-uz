@@ -58,7 +58,7 @@ const LastStep = () => {
                 <p className='text-[#322C394D] text-[0.75rem] font-[500]'>You can choose up to 8 interests</p>
             </div>
 
-            <Link className='py-[12px] px-[100px] text-center text-purple bg-lightPurple text-[0.813rem] font-[400] leading-normal' href={'/'} onClick={() => window.localStorage.setItem("token","uy9f6adsfv87aft6a987fd8dfasfq4512faesdf")}>
+            <Link className='py-[12px] px-[100px] text-center text-purple bg-lightPurple text-[0.813rem] font-[400] leading-normal' href={'/user-profile'} onClick={() => window.localStorage.setItem("token","uy9f6adsfv87aft6a987fd8dfasfq4512faesdf")}>
                 Finish register
             </Link>
 
