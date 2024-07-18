@@ -11,7 +11,6 @@ export const Icons = {
             <rect 
                 width="32" 
                 height="32" 
-                fill="#322C39"
             />
             <circle 
                 cx="16" 
