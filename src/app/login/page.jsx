@@ -48,7 +48,7 @@ const Page = () => {
         </section>
 
         {/* Right Section */}
-        <section className='w-[45%] overflow-y-hidden h-[100vh] relative'>
+        <section className='w-[45%] overflow-y-hidden min-h-[100vh] relative'>
           <div className='absolute flex top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'>
             <Icons.logov2 width='90px' height='90px' className='mr-[11px]' />
             <h2 className='font-onest text-[4rem] font-[800] leading-[normal] text-white'>onest</h2>

@@ -18,6 +18,7 @@ module.exports = {
         lightPurple: '#F8F2FF',
         hrColor: '#EFEFEF',
         secondary: '#121212',
+        red: '#F00F00',
       },
       fontFamily: {
         onest: ['Onest', 'sans-serif'],
