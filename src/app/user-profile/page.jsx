@@ -13,7 +13,7 @@ const UserProfile = () => {
       <UserProfileSidebar />
 
       {/* Main Contnet */}
-      <section className='pt-[20px] flex-grow-[1] '>
+      <section className='pt-[20px] flex-grow-[1]'>
 
         {/* User Profile Data */}
         <div className='mb-[35px]'>
@@ -26,11 +26,13 @@ const UserProfile = () => {
           <input className='placeholder:text-black/30 text-[1rem] font-[500]' placeholder='@username'/>
         </div>
 
-        {/* MY SMM Managers */}
-        <div className='mb-[35px]'>
-          <MyManagers />
-        </div>
-        <RecomendedManager />
+        <section className='h-[60vh] overflow-auto'>
+          {/* MY SMM Managers */}
+          <div className='mb-[35px]'>
+            <MyManagers />
+          </div>
+          <RecomendedManager />
+        </section>
       </section>
     </section>
   )
