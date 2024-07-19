@@ -1,32 +1,13 @@
 "use client"
 
+import useUserRegister from '@/hooks/useUserRegister/useUserRegister'
 import { Icons } from '@/icons'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 const Navbar = () => {
-  const pathname = usePathname()
-  const [showNavbar, setShowNavbar] = useState(true)
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleRouteChange = (url) => {
-        if (url.startsWith('/login') || url.startsWith('/register')) {
-          setShowNavbar(false)
-        } else {
-          setShowNavbar(true)
-        }
-      }
-
-      // Initial check
-      handleRouteChange(pathname)
-    }
-  }, [pathname])
-
-  if (!showNavbar) {
-    return null
-  }
+  useUserRegister()
 
   return (
     <nav className='py-[17px] border-b-[1px] border-borderColor border-solid px-[20px] min-w-[1218px] flex justify-between '>
