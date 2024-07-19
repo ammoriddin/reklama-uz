@@ -6,7 +6,7 @@ const MyManagers = () => {
     <section>
         <p className='text-black text-[0.75rem] font-[400] mb-[30px]'>Мои СММ менеджера</p>
     
-        <div className='flex flex-col gap-[30px]'>
+        <div className='flex flex-col gap-[30px] w-full'>
             <UserCard newStory={true} />
             <UserCard newStory={false} />
             <UserCard newStory={false} />
