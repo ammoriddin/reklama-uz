@@ -4,17 +4,18 @@ import Categorie from '@/components/categories';
 import { Icons } from '@/icons';
 import CustomSelect from '@/system-components/slelect-input';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
 
 const LastStep = () => {
     const [jobs, setJobs] = useState();
     const [state, setState] = useState();
+    const [registerFinish, setRegisterFinish] = useState(false)
 
-    const handleClick = () => {
-        if (typeof window !== 'undefined') {
-            window.localStorage.setItem("token", "uy9f6adsfv87aft6a987fd8dfasfq4512faesdf");
-        }
-    };
+    
+    useEffect(() => {
+        localStorage.setItem('token', 'dasdasd')
+    }, [])
 
     return (
         <div className='pr-[50px] w-full flex-grow-[1]'>
@@ -64,7 +65,7 @@ const LastStep = () => {
                 <p className='text-[#322C394D] text-[0.75rem] font-[500]'>You can choose up to 8 interests</p>
             </div>
 
-            <Link className='py-[12px] px-[100px] text-center text-purple bg-lightPurple text-[0.813rem] font-[400] leading-normal' href={'/user-profile'} onClick={handleClick}>
+            <Link className='py-[12px] px-[100px] text-center text-purple bg-lightPurple text-[0.813rem] font-[400] leading-normal' href={'/user-profile'} onClick={() => setRegisterFinish(true)}>
                 Finish register
             </Link>
 
