@@ -6,7 +6,8 @@ const useUserRegister = () => {
     const router = useRouter()
 
     useEffect(() => {
-         const isUserRegister = window.localStorage.getItem("token")
+        const isUserRegister = window.localStorage.getItem("token")
+        console.log(isUserRegister);
 
         if (!isUserRegister) {
             router.push("/login")
