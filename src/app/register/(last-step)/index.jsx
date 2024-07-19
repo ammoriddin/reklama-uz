@@ -15,7 +15,7 @@ const LastStep = () => {
     
     useEffect(() => {
         localStorage.setItem('token', 'dasdasd')
-    }, [])
+    }, [registerFinish])
 
     return (
         <div className='pr-[50px] w-full flex-grow-[1]'>
