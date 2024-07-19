@@ -6,17 +6,18 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { sidebarLink } from './(sidebar-link-data)'
+import Image from 'next/image'
 
 const UserProfileSidebar = () => {
     const router = usePathname()
 
     return (
-        <div className='pr-[90px] sticky top-0 py-[50px] h-[100vh] overflow-auto flex flex-col border-r-[1px] border-solid border-borderColor'>
+        <div className='pr-[90px] py-[50px] h-[92vh] overflow-auto flex flex-col border-r-[1px] border-solid border-borderColor'>
             <div className='flex-grow-[1]'>
 
                 {/* User Profile Data */}
                 <div className='flex gap-[12px] items-center mb-[20px]'>
-                    <div className='bg-navbarBackground p-[12px] w-[40px] h-[40px] rounded-[50%] flex items-center justify-center'>
+                    <div className='bg-navbarBackground p-[12px] w-[36px] h-[36px] rounded-[50%] flex items-center justify-center'>
                         <Icons.user />
                     </div>
 
@@ -34,7 +35,7 @@ const UserProfileSidebar = () => {
                     <CustomButton widht={'w-full'} text={"Снять с баланса"} />
                 </div>
 
-                <ul className='pl-[12px] flex flex-col gap-[13px]'>
+                <ul className='pl-[12px] flex flex-col gap-[13px] mb-[31px]'>
                     {
                         sidebarLink.map((item, index) => (
                             <li key={index} className='flex items-center gap-[6px]'>
@@ -46,6 +47,107 @@ const UserProfileSidebar = () => {
                         ))
                     }
                 </ul>
+
+                {/* Members */}
+                {
+                    router === "/" &&
+                    <div className='p-[16px] rounded-[3px] border-[1px] border-solid border-borderColor w-[270px]'>
+                        <p className='text-[black] text-[0.75rem] leading-[14.32px] mb-[25px]'>12 994 участников</p>
+                        
+                        <div className='flex flex-col gap-[20px] h-[350px] overflow-auto'>
+                            <div className='flex gap-[5px] items-center'>
+
+                                {/* profile photo */}
+                                <div className='w-[36px] h-[36px] flex-shrink-0'>
+                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                </div>
+
+                                <div>
+                                    <h3 className='text-[0.813rem] text-black/40 leading-[15.5px]'>Leonele Messi</h3>
+                                    <p className='text-black text-[0.75rem] leading-[14px]'>Man xali 1chi orin olaman, xammeni mazeni qochiraman, ishonurlaring</p>
+                                </div>
+                            </div>
+
+                            <div className='flex gap-[5px] items-center'>
+
+                                {/* profile photo */}
+                                <div className='w-[36px] h-[36px] flex-shrink-0'>
+                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                </div>
+
+                                <div>
+                                    <h3 className='text-[0.813rem] text-black/40 leading-[15.5px]'>Leonele Messi</h3>
+                                    <p className='text-black text-[0.75rem] leading-[14px]'>Man xali 1chi orin olaman, xammeni mazeni qochiraman, ishonurlaring</p>
+                                </div>
+                            </div>
+
+                            <div className='flex gap-[5px] items-center'>
+
+                                {/* profile photo */}
+                                <div className='w-[36px] h-[36px] flex-shrink-0'>
+                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                </div>
+
+                                <div>
+                                    <h3 className='text-[0.813rem] text-black/40 leading-[15.5px]'>Leonele Messi</h3>
+                                    <p className='text-black text-[0.75rem] leading-[14px]'>Man xali 1chi orin olaman, xammeni mazeni qochiraman, ishonurlaring</p>
+                                </div>
+                            </div>
+
+                            <div className='flex gap-[5px] items-center'>
+
+                                {/* profile photo */}
+                                <div className='w-[36px] h-[36px] flex-shrink-0'>
+                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                </div>
+
+                                <div>
+                                    <h3 className='text-[0.813rem] text-black/40 leading-[15.5px]'>Leonele Messi</h3>
+                                    <p className='text-black text-[0.75rem] leading-[14px]'>Man xali 1chi orin olaman, xammeni mazeni qochiraman, ishonurlaring</p>
+                                </div>
+                            </div>
+
+                            <div className='flex gap-[5px] items-center'>
+
+                                {/* profile photo */}
+                                <div className='w-[36px] h-[36px] flex-shrink-0'>
+                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                </div>
+
+                                <div>
+                                    <h3 className='text-[0.813rem] text-black/40 leading-[15.5px]'>Leonele Messi</h3>
+                                    <p className='text-black text-[0.75rem] leading-[14px]'>Man xali 1chi orin olaman, xammeni mazeni qochiraman, ishonurlaring</p>
+                                </div>
+                            </div>
+
+                            <div className='flex gap-[5px] items-center'>
+
+                                {/* profile photo */}
+                                <div className='w-[36px] h-[36px] flex-shrink-0'>
+                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                </div>
+
+                                <div>
+                                    <h3 className='text-[0.813rem] text-black/40 leading-[15.5px]'>Leonele Messi</h3>
+                                    <p className='text-black text-[0.75rem] leading-[14px]'>Man xali 1chi orin olaman, xammeni mazeni qochiraman, ishonurlaring</p>
+                                </div>
+                            </div>
+
+                            <div className='flex gap-[5px] items-center'>
+
+                                {/* profile photo */}
+                                <div className='w-[36px] h-[36px] flex-shrink-0'>
+                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                </div>
+
+                                <div>
+                                    <h3 className='text-[0.813rem] text-black/40 leading-[15.5px]'>Leonele Messi</h3>
+                                    <p className='text-black text-[0.75rem] leading-[14px]'>Man xali 1chi orin olaman, xammeni mazeni qochiraman, ishonurlaring</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
 
             <div>

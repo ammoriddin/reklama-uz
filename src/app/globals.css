@@ -42,4 +42,7 @@ input[type="number"] {
 .categories_wrapper::-webkit-scrollbar-corner {
     background: transparent; /* Make the corner background transparent */
 }
-  
+
+::-webkit-scrollbar {
+    width: 0;
+}
