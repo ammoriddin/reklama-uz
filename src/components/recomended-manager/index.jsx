@@ -1,5 +1,5 @@
 import React from 'react'
-import UserCard from '../user-card'
+import RecomendedUser from '../recomended-user-card'
 
 const RecomendedManager = () => {
   return (
@@ -7,12 +7,9 @@ const RecomendedManager = () => {
         <p className='text-black text-[0.75rem] font-[400] mb-[30px]'>Реккомендуемые СММ Менеджера</p>
     
         <div className='flex flex-col gap-[30px]'>
-            <UserCard newStory={true} />
-            <UserCard newStory={false} />
-            <UserCard newStory={false} />
-            <UserCard newStory={true} />
-            <UserCard newStory={true} />
-            <UserCard newStory={false} />
+            <RecomendedUser />
+            <RecomendedUser />
+            <RecomendedUser />
         </div>
     </section>
   )

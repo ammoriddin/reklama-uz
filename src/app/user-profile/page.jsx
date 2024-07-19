@@ -23,7 +23,7 @@ const UserProfile = () => {
         {/* Search User */}
         <div className='flex items-center gap-[11px] mb-[18px]'>
           <Icons.searchIcon width='32px' height='32px' />
-          <p className='text-black/30 text-[1rem] font-[500] '>@username</p>
+          <input className='placeholder:text-black/30 text-[1rem] font-[500]' placeholder='@username'/>
         </div>
 
         {/* MY SMM Managers */}

@@ -9,7 +9,7 @@ import RegisterSteps from './(register-steps)'
 import Verification from './(verificaton)'
 import LastStep from './(last-step)'
 
-const page = () => {
+const Register = () => {
   const [step, setStep] = useState(0)
 
   return (
@@ -66,7 +66,7 @@ const page = () => {
         </section>
 
         {/* Right Section */}
-        <section className='w-[45%] overflow-y-hidden min-h-[100vh] relative'>
+        <section className='w-[45%] overflow-y-hidden h-[100vh] sticky top-0'>
           <div className='absolute flex top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'>
             <Icons.logov2 width='90px' height='90px' className='mr-[11px]' />
             <h2 className='font-onest text-[4rem] font-[800] leading-[normal] text-white'>onest</h2>
@@ -77,4 +77,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Register
