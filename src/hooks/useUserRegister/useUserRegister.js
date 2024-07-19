@@ -11,7 +11,7 @@ const useUserRegister = () => {
         if (!isUserRegister) {
             router.push("/login")
         }
-    }, [isUserRegister, router])
+    }, [router])
 }
 
 export default useUserRegister
