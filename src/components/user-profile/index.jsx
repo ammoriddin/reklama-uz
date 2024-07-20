@@ -51,7 +51,7 @@ const UserProfileSidebar = () => {
                 {/* Members */}
                 {
                     router === "/" &&
-                    <div className='p-[16px] rounded-[3px] border-[1px] border-solid border-borderColor w-[270px]'>
+                    <div className='p-[16px] rounded-[3px] border-[1px] border-solid border-borderColor w-[270px] mb-[20px]'>
                         <p className='text-[black] text-[0.75rem] leading-[14.32px] mb-[25px]'>12 994 участников</p>
                         
                         <div className='flex flex-col gap-[20px] h-[350px] overflow-auto'>
@@ -155,8 +155,8 @@ const UserProfileSidebar = () => {
                     <Link href={'/help'} className={`${router === "/help" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
                         Help
                     </Link>
-                    <Link href={'/setting'} className={`${router === "/setting" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
-                        Setting
+                    <Link href={'/settings'} className={`${router === "/settings" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
+                        Settings
                     </Link>
                     <Link href={'/support'} className={`${router === "/support" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
                         Support

@@ -5,7 +5,7 @@ const RightSidebar = () => {
   return (
     <div className='block mr-auto px-[20px] border-l-[1px] border-borderColor border-solid sticky top-0 h-[92vh] overflow-auto'>
         <div className='py-[40px]'>
-            <div className='flex items-center gap-[8px]'>
+            <div className='flex items-center gap-[8px] mb-[23px]'>
 
                 {/* SMM Manager Photo */}
                 <div className='w-[50px] h-[50px]'>

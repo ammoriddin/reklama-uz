@@ -1,7 +1,19 @@
+"use client"
+
 import { Icons } from '@/icons'
-import React from 'react'
+import Link from 'next/link'
+import React, { useEffect, useState } from 'react'
 
 const UserData = () => {
+  const [logout, setlogout ] = useState(false)
+
+  useEffect(() => {
+    if (logout === true) {
+      window.localStorage.removeItem("token")
+    }
+  }, [logout])
+  
+
   return (
     <div className='px-[32px] w-full py-[24px] border-[1px] h-auto border-solid border-borderColor rounded-[3px]'>
       <div className='flex items-start justify-between'>
@@ -24,25 +36,25 @@ const UserData = () => {
           {/* statistics */}
           <div className='flex gap-[4px] items-center'>
             <Icons.statsIcon />
-            <p className='text-black font-[400 text-[0.813rem]'>My statistics</p>
+            <Link href={'/my-statistics'} className='text-black font-[400 text-[0.813rem]'>My statistics</Link>
           </div>
 
           {/* edit profile */}
           <div className='flex gap-[4px] items-center'>
             <Icons.edit />
-            <p className='text-black font-[400 text-[0.813rem]'>Profile edit</p>
+            <Link href={'/profile-edit'} className='text-black font-[400 text-[0.813rem]'>Profile edit</Link>
           </div>
 
           {/* card */}
           <div className='flex gap-[4px] items-center'>
             <Icons.card />
-            <p className='text-black font-[400 text-[0.813rem]'>Card</p>
+            <Link href={'/card'} className='text-black font-[400 text-[0.813rem]'>Card</Link>
           </div>
 
           {/* log out */}
           <div className='flex gap-[4px] items-center'>
             <Icons.logout />
-            <p className='font-[400 text-[0.813rem] text-red'>Log out</p>
+            <button onClick={() => setlogout(true)} className='font-[400 text-[0.813rem] text-red'>Log out</button>
           </div>
         </div>
       </div>
