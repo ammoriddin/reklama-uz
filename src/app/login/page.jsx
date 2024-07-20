@@ -25,7 +25,7 @@ const Page = () => {
             </div>
 
             <div>
-              <p className='text-purple text-[0.813rem] font-[400] leading-normal underline mb-[8px]'>Для SMM-менеджеров</p>
+              <a className='text-primary cursor-pointer text-[0.813rem] font-[400] leading-normal hover:underline transition-all hover:text-purple mb-[8px]'>Для SMM-менеджеров</a>
               <p className='text-primary text-[0.813rem] font-[400] leading-normal mb-[22px]'>Для предприятия</p>
 
               <div className='flex gap-[20px] mb-[14px]'>
