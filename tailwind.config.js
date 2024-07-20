@@ -19,6 +19,9 @@ module.exports = {
         hrColor: '#EFEFEF',
         secondary: '#121212',
         red: '#F00F00',
+        secondaryGray: '#F6F5F7',
+        darkPurple: '#DCD8E0',
+        darkGray: '#EFEEF1'
       },
       fontFamily: {
         onest: ['Onest', 'sans-serif'],
