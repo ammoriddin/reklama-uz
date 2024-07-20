@@ -50,3 +50,7 @@ input[type="number"] {
 .accardion:hover .accardion-icon {
     fill: white;
 }
+
+canvas {
+    width: 100% !important;
+}
