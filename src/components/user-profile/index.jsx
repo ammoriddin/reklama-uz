@@ -152,13 +152,13 @@ const UserProfileSidebar = () => {
 
             <div>
                 <div className='flex gap-[20px] mb-[14px]'>
-                    <Link href={'/help'} className='text-primary text-[0.813rem] font-[400] leading-normal'>
+                    <Link href={'/help'} className={`${router === "/help" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
                         Help
                     </Link>
-                    <Link href={'/setting'} className='text-primary text-[0.813rem] font-[400] leading-normal'>
+                    <Link href={'/setting'} className={`${router === "/setting" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
                         Setting
                     </Link>
-                    <Link href={'/support'} className='text-primary text-[0.813rem] font-[400] leading-normal'>
+                    <Link href={'/support'} className={`${router === "/support" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
                         Support
                     </Link>
                 </div>
