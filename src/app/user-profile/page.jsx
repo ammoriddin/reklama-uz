@@ -1,5 +1,6 @@
 "use client"
 
+import Card from '@/components/card-section'
 import MyManagers from '@/components/managers'
 import RecomendedManager from '@/components/recomended-manager'
 import StatsLikesComent from '@/components/stats'
@@ -7,6 +8,7 @@ import UserData from '@/components/user-data'
 import UserProfileSidebar from '@/components/user-profile'
 import { useTab } from '@/hooks/useTab'
 import { Icons } from '@/icons'
+import CustomInput from '@/system-components/input'
 import CustomSelect from '@/system-components/slelect-input'
 import React from 'react'
 
@@ -24,7 +26,15 @@ const UserProfile = () => {
 
         {/* User Profile Data */}
         <div className='mb-[35px]'>
-          <UserData tab={value} setTab={setValue} />
+          {
+            value !== 'card' &&
+            <UserData tab={value} setTab={setValue} />
+          }
+
+          {
+            value === 'card' &&
+            <Card tab={value} setTab={setValue} />
+          }
         </div>
 
         {/* Search User */}

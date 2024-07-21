@@ -80,13 +80,6 @@ const UserData = ({tab, setTab}) => {
           </div>
         }
 
-        {
-          tab === "card" &&
-          <div className='mt-[8px]'>
-            card
-          </div>
-        }
-
         {/* Functions */}
         <div className='flex items-center gap-[24px]'>
           
