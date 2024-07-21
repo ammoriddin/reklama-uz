@@ -51,7 +51,7 @@ const UserProfileSidebar = () => {
                 {/* Members */}
                 {
                     router === "/" &&
-                    <div className='p-[16px] rounded-[3px] border-[1px] border-solid border-borderColor w-[270px] mb-[20px]'>
+                    <div className='pt-[16px] px-[16px] rounded-[3px] border-[1px] border-solid border-borderColor w-[270px] mb-[20px]'>
                         <p className='text-[black] text-[0.75rem] leading-[14.32px] mb-[25px]'>12 994 участников</p>
                         
                         <div className='flex flex-col gap-[20px] h-[350px] overflow-auto'>
@@ -133,7 +133,7 @@ const UserProfileSidebar = () => {
                                 </div>
                             </div>
 
-                            <div className='flex gap-[5px] items-center'>
+                            <div className='flex gap-[5px] items-center mb-[16px]'>
 
                                 {/* profile photo */}
                                 <div className='w-[36px] h-[36px] flex-shrink-0'>

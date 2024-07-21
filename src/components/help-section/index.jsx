@@ -2,6 +2,7 @@ import CustomButton from '@/system-components/button'
 import TextArea from '@/system-components/text-area'
 import React from 'react'
 import FAQ from '../faq'
+import { Icons } from '@/icons'
 
 const HelpSection = () => {
   return (
@@ -41,6 +42,20 @@ const HelpSection = () => {
         </div>
 
         {/* Social Media */}
+        <div className='flex gap-[28px] items-center'>
+          <a href="https://www.instagram.com/" target='_blank'>
+            <Icons.facebook fill='#322C39' />
+          </a>
+          <a href="https://www.instagram.com/" target='_blank'>
+            <Icons.instagram fill='#322C39' />
+          </a>
+          <a href="https://www.instagram.com/" target='_blank'>
+            <Icons.telegram fill='#322C39' />
+          </a>
+          <a href="https://www.instagram.com/" target='_blank'>
+            <Icons.linkedIn fill='#322C39' />
+          </a>
+        </div>
     </div>
   )
 }
