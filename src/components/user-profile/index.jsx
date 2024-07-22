@@ -7,12 +7,13 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 import { sidebarLink } from './(sidebar-link-data)'
 import Image from 'next/image'
+import HomePageSidebar from './home-page'
 
 const UserProfileSidebar = () => {
     const router = usePathname()
 
     return (
-        <div className='pr-[90px] py-[50px] h-[92vh] overflow-auto flex flex-col border-r-[1px] border-solid border-borderColor'>
+        <div className='pr-[90px] pb-[16px] pt-[50px] h-[92vh] overflow-auto flex flex-col border-r-[1px] border-solid border-borderColor'>
             <div className='flex-grow-[1]'>
 
                 {/* User Profile Data */}
@@ -50,7 +51,7 @@ const UserProfileSidebar = () => {
 
                 {/* Members */}
                 {
-                    router === "/" &&
+                    router === "/live" &&
                     <div className='pt-[16px] px-[16px] rounded-[3px] border-[1px] border-solid border-borderColor w-[270px] mb-[20px]'>
                         <p className='text-[black] text-[0.75rem] leading-[14.32px] mb-[25px]'>12 994 участников</p>
                         
@@ -148,26 +149,60 @@ const UserProfileSidebar = () => {
                         </div>
                     </div>
                 }
+
+                {/* home page section */}
+                {
+                    router === '/' &&
+                    <HomePageSidebar />
+                }
+
             </div>
 
-            <div>
-                <div className='flex gap-[20px] mb-[14px]'>
-                    <Link href={'/help'} className={`${router === "/help" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
-                        Help
-                    </Link>
-                    <Link href={'/settings'} className={`${router === "/settings" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
-                        Settings
-                    </Link>
-                    <Link href={'/support'} className={`${router === "/support" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
-                        Support
-                    </Link>
-                </div>
+            {
+                router === '/' &&
+                <div className='flex px-[10px] gap-[8px] items-center'>
+                    
+                    {/* App store */}
+                    <a className='flex px-[16px] py-[14px] rounded-[4px] primary-shadow items-center gap-[8px]'>
+                        <Icons.apple fill="#121212" />
+                        <div>
+                            <p className='text-secondary/30 text-[0.75rem] leading-[13px] font-[400] '>Доступно в</p>
+                            <h4 className='text-secondary text-[0.875rem] font-[500] leading-[17px]'>App Store</h4>
+                        </div>
+                    </a>
 
-                <div className='flex gap-[24px]'>
-                    <p className='text-black/60 text-[0.813rem] font-[400] leading-normal'>Privacy & Policy</p>
-                    <p className='text-black/60 text-[0.813rem] font-[400] leading-normal'>Copyright 2023</p>
+                    {/* Play Market */}
+                    <a className='flex px-[16px] py-[14px] rounded-[4px] primary-shadow items-center gap-[8px]'>
+                        <Icons.playMarket fill="#1F1714" />
+                        <div>
+                            <p className='text-secondary/30 text-[0.75rem] leading-[13px] font-[400] '>Скачайте в</p>
+                            <h4 className='text-secondary text-[0.875rem] font-[500] leading-[17px]'>Google Play</h4>
+                        </div>
+                    </a>
                 </div>
-            </div>
+            }
+
+            {
+                router !== '/' &&
+                <div>
+                    <div className='flex gap-[20px] mb-[14px]'>
+                        <Link href={'/help'} className={`${router === "/help" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
+                            Help
+                        </Link>
+                        <Link href={'/settings'} className={`${router === "/settings" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
+                            Settings
+                        </Link>
+                        <Link href={'/support'} className={`${router === "/support" ? "text-purple" : "text-primary"} text-[0.813rem] font-[400] leading-normal`}>
+                            Support
+                        </Link>
+                    </div>
+
+                    <div className='flex gap-[24px]'>
+                        <p className='text-black/60 text-[0.813rem] font-[400] leading-normal'>Privacy & Policy</p>
+                        <p className='text-black/60 text-[0.813rem] font-[400] leading-normal'>Copyright 2023</p>
+                    </div>
+                </div>
+            }
         </div>
     )
 }
