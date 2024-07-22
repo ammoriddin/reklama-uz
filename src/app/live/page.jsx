@@ -1,9 +1,9 @@
-import HomePage from "@/components/home-page/page";
+import LivePage from "@/components/live-page";
 
 export default function Home() {
   return (
     <section>
-      <HomePage />
+      <LivePage />
     </section>
   );
 }

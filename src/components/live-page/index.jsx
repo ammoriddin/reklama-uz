@@ -6,7 +6,7 @@ import UserProfileSidebar from '../user-profile'
 import LiveSection from '../live-section'
 import RightSidebar from './(right-sidebar)'
 
-const HomePage = () => {
+const LivePage = () => {
 
     useUserRegister()
 
@@ -27,4 +27,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default LivePage
