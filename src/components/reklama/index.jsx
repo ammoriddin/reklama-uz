@@ -1,15 +1,56 @@
+'use client'
+
 import { Icons } from '@/icons'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import UserMessage from '../user-message'
 
 const Reklama = () => {
+  const [coment, setComent] = useState(false)
+
   return (
-    <div className='w-[500px] h-[88vh] bg-navbarBackground'>
+    <div className='w-[500px] h-[88vh] bg-navbarBackground reels-shadow'>
       <div className='w-full h-[90%] relative'>
-        <Image src='/posts/uzum-market-post.webp' width={500} height={0} className='w-full h-full object-contain object-center' />
+        {
+          coment == false && 
+          <Image src='/posts/uzum-market-post.webp' width={500} height={0} className='w-full h-full object-contain object-center' />
+        }
+        {
+          coment && 
+          <div className='w-full h-full bg-white p-[24px] relative'>
+            <p className='text-[0.938rem] font-[500] mb-[23px]'>Comments 12</p>
+
+            <div className='flex flex-col gap-[20px] h-[88%] overflow-auto mb-[20px]'>
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+              <UserMessage />
+            </div>
+
+            <div className='sticky border-b-[1px] border-solid border-borderColor flex items-center bottom-0 bg-white'>
+              <input type="text" placeholder='type here' className='px-[5px] py-[11px] text-black flex-grow-[1] text-[1rem] font-[500] placeholder:text-black/30' />
+              <div className='flex items-center gap-[8px]'>
+                <Icons.smile className='cursor-pointer' width='20px' height='20px' fill='#322C39' />
+                <Icons.send className='cursor-pointer' stroke="#7000FF" width='24px' height='24px' />
+              </div>
+            </div>
+          </div>
+        }
       </div>
 
-      <div className='bg-white flex px-[25px] py-[12px] items-center justify-between w-full h-[10%] reels-shadow'>
+      <div className='bg-white flex px-[25px] py-[12px] items-center justify-between w-full h-[10%]'>
         <div className='flex items-center gap-[24px]'>
 
           {/* Like */}
@@ -20,7 +61,7 @@ const Reklama = () => {
 
           {/* Coment */}
           <div className='flex items-center gap-[4px]'>
-            <Icons.coment className='cursor-pointer' width='21px' height='21px' fill='#322C39' />
+            <Icons.coment onClick={() => setComent(!coment)} className='cursor-pointer' width='21px' height='21px' fill='#322C39' />
             <span className='text-black/30 text-[0.875rem] font-[500] leading-[normal]'>34</span>
           </div>
 
