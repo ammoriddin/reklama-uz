@@ -14,7 +14,7 @@ const GiveAwaySection = () => {
     const [duration, setDuration] = useState(1); // default duration value
     const hourRef = useRef();
     const [isStart, setIsStart] = useState(false)
-     const router = useRouter()
+    const router = useRouter()
 
     const handleDurationChange = (value) => {
         setDuration(value);
@@ -23,16 +23,16 @@ const GiveAwaySection = () => {
     useEffect(() => {
         if (date && duration) {
             setIsStart(true)
-        } else (
+        } else {
             setIsStart(false)
-        )
+        }
     }, [date, duration])
     
 
     useEffect(() => {
         const handleSliderChange = () => {
             const sliderHandle = document.querySelector(".rc-slider-handle");
-            if (sliderHandle) {
+            if (sliderHandle && hourRef.current) {
                 const left = sliderHandle.style.left;
                 hourRef.current.style.left = left;
                 // Update class based on left position
@@ -40,19 +40,21 @@ const GiveAwaySection = () => {
             }
         };
 
-        // Observe changes to the slider handle
-        const observer = new MutationObserver(handleSliderChange);
-        const sliderHandle = document.querySelector(".rc-slider-handle");
-        if (sliderHandle) {
-            observer.observe(sliderHandle, { attributes: true, attributeFilter: ['style'] });
-        }
-
-        return () => {
-            // Clean up observer on component unmount
+        if (typeof document !== 'undefined') {
+            // Observe changes to the slider handle
+            const observer = new MutationObserver(handleSliderChange);
+            const sliderHandle = document.querySelector(".rc-slider-handle");
             if (sliderHandle) {
-                observer.disconnect();
+                observer.observe(sliderHandle, { attributes: true, attributeFilter: ['style'] });
             }
-        };
+
+            return () => {
+                // Clean up observer on component unmount
+                if (sliderHandle) {
+                    observer.disconnect();
+                }
+            };
+        }
     }, []);
 
     return (
@@ -98,11 +100,11 @@ const GiveAwaySection = () => {
             </div>
 
             <CustomButton onClickFunction={() => {
-                if (isStart ) {
+                if (isStart) {
                     router.push("/create-give-away/step-2")
-                } else (
+                } else {
                     toast.warning("Birinchi navbatda Shartlarni to'ldiring")
-                )
+                }
             }} text={'Start'} padding={'px-[60px] py-[11px]'} style={{color: '#322c39', backgroundColor: '#F5F5F5'}} />
         </div>
     );
