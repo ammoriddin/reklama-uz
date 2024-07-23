@@ -1,6 +1,8 @@
 import Head from "next/head";
 import "./globals.css";
 import Navbar from "@/containers/navbar/inde";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: "Create Next App",
@@ -14,6 +16,7 @@ export default function RootLayout({ children }) {
         <title>Reklama Uz</title>
       </Head>
       <body>
+        <ToastContainer />
         <Navbar />
         <main>
           {children}
