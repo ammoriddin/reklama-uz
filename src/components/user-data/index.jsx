@@ -48,7 +48,7 @@ const UserData = ({tab, setTab}) => {
       <div className='flex items-start justify-between'>
 
         {
-          tab === "default" &&
+          (tab === "default" || tab === 'profile-edit') &&
           <div className='flex gap-[12px] items-center mt-[8px]'>
             <div className='bg-navbarBackground p-[12px] w-[95px] h-[95px] rounded-[50%] flex items-center justify-center'>
               <Icons.user width='32px' height='32px' />
@@ -70,13 +70,6 @@ const UserData = ({tab, setTab}) => {
             <div className='absolute top-[-2px]'>
               <StatsChart data={secondChartData} />
             </div>
-          </div>
-        }
-
-        {
-          tab === "profile-edit" &&
-          <div className='mt-[8px]'>
-            profile-edit
           </div>
         }
 
@@ -110,7 +103,7 @@ const UserData = ({tab, setTab}) => {
       </div>
 
       {
-        tab === "default" &&
+        (tab === "default" || tab === "profile-edit") &&
         <div className='pl-[110px] flex flex-wrap gap-[28px] w-[700px]'>
           <p className='text-[0.875rem] font-[400] text-black'># ingliz tili</p>
           <p className='text-[0.875rem] font-[400] text-black'>#  ✒️ dizayn</p>
