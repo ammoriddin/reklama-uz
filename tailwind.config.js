@@ -21,11 +21,15 @@ module.exports = {
         red: '#F00F00',
         secondaryGray: '#F6F5F7',
         darkPurple: '#DCD8E0',
-        darkGray: '#EFEEF1'
+        darkGray: '#EFEEF1',
+        yellow: "#F4761A",
       },
       fontFamily: {
         onest: ['Onest', 'sans-serif'],
       },
+      screens: {
+        'laptop': '1471'
+      }
     },
   },
   plugins: [],

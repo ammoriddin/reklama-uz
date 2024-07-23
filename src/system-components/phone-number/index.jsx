@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PhoneNumberInput = ({ value, setValue }) => {
+const PhoneNumberInput = ({ value, setValue, ...props }) => {
   const handleChange = (e) => {
     const inputValue = e.target.value;
     if (inputValue.length <= 9) {
@@ -13,6 +13,7 @@ const PhoneNumberInput = ({ value, setValue }) => {
       <span className='text-[black] text-[1rem] font-[500]'>+998</span>
       <span className='h-[19px] w-[1px] bg-hrColor'></span>
       <input
+        {...props}
         value={value}
         onChange={handleChange}
         type='number'
