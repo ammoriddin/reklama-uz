@@ -6,15 +6,15 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import RichTextEditor from '@/system-components/rich-text-editor';
 import CustomButton from '@/system-components/button';
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
 const GiveAwaySection = () => {
     const [date, setDate] = useState();
     const [duration, setDuration] = useState(1); // default duration value
     const hourRef = useRef();
-    const [isStart, setIsStart] = useState(false)
-    const router = useRouter()
+    const [isStart, setIsStart] = useState(false);
+    const router = useRouter();
 
     const handleDurationChange = (value) => {
         setDuration(value);
@@ -22,32 +22,34 @@ const GiveAwaySection = () => {
 
     useEffect(() => {
         if (date && duration) {
-            setIsStart(true)
+            setIsStart(true);
         } else {
-            setIsStart(false)
+            setIsStart(false);
         }
-    }, [date, duration])
-    
+    }, [date, duration]);
+
     const handleSliderChange = () => {
-        const sliderHandle = document.getElementsByClassName("rc-slider-handle");
-        if (sliderHandle && hourRef.current) {
-            const left = sliderHandle[0].style.left;
-            hourRef.current.style.left = left;
+        if (typeof document !== 'undefined') {
+            const sliderHandle = document.getElementsByClassName("rc-slider-handle");
+            if (sliderHandle && hourRef.current) {
+                const left = sliderHandle[0].style.left;
+                hourRef.current.style.left = left;
+            }
         }
     };
 
     useEffect(() => {
         if (typeof document !== 'undefined') {
-          const observer = new MutationObserver(handleSliderChange);
-          const sliderHandles = document.getElementsByClassName("rc-slider-handle");
-    
-          Array.from(sliderHandles).forEach((sliderHandle) => {
-            observer.observe(sliderHandle, { attributes: true, attributeFilter: ['style'] });
-          });
-    
-          return () => {
-            observer.disconnect();
-          };
+            const observer = new MutationObserver(handleSliderChange);
+            const sliderHandles = document.getElementsByClassName("rc-slider-handle");
+
+            Array.from(sliderHandles).forEach((sliderHandle) => {
+                observer.observe(sliderHandle, { attributes: true, attributeFilter: ['style'] });
+            });
+
+            return () => {
+                observer.disconnect();
+            };
         }
     }, []);
 
