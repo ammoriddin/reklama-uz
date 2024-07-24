@@ -27,7 +27,7 @@ const GiveAwaySection = () => {
             setIsStart(false)
         }
     }, [date, duration])
-    
+
 
     useEffect(() => {
         const handleSliderChange = () => {
@@ -105,7 +105,7 @@ const GiveAwaySection = () => {
                 } else {
                     toast.warning("Birinchi navbatda Shartlarni to'ldiring")
                 }
-            }} text={'Start'} padding={'px-[60px] py-[11px]'} style={{color: '#322c39', backgroundColor: '#F5F5F5'}} />
+            }} text={'Start'} padding={'px-[60px] py-[11px]'} style={{ color: '#322c39', backgroundColor: '#F5F5F5' }} />
         </div>
     );
 };
