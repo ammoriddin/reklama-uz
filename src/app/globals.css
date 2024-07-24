@@ -111,6 +111,7 @@ canvas {
     padding: 16 24px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    border-color: #EEE !important;
 }
 
 .ql-editor {
@@ -118,6 +119,7 @@ canvas {
 }
 
 .ql-container {
+    border-color: #EEE !important;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     height: 200px !important;
@@ -126,4 +128,33 @@ canvas {
 
 .quill {
     width: 580px;
+}
+
+input[type="radio"] {
+    display: grid;
+    place-content: center;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 1px solid #322C39;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+    background-color: #7000ff;
+    border: 1px solid #7000ff;
+    position: relative;
+}
+
+
+input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid white;
+    border-radius: 50%;
 }
