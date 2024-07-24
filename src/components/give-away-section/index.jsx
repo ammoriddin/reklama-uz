@@ -28,32 +28,26 @@ const GiveAwaySection = () => {
         }
     }, [date, duration])
     
+    const handleSliderChange = () => {
+        const sliderHandle = document.getElementsByClassName("rc-slider-handle");
+        if (sliderHandle && hourRef.current) {
+            const left = sliderHandle[0].style.left;
+            hourRef.current.style.left = left;
+        }
+    };
 
     useEffect(() => {
-        const handleSliderChange = () => {
-            const sliderHandle = document.querySelector(".rc-slider-handle");
-            if (sliderHandle && hourRef.current) {
-                const left = sliderHandle.style.left;
-                hourRef.current.style.left = left;
-                // Update class based on left position
-                hourRef.current.classList.add(`left-[${left}]`);
-            }
-        };
-
         if (typeof document !== 'undefined') {
-            // Observe changes to the slider handle
-            const observer = new MutationObserver(handleSliderChange);
-            const sliderHandle = document.querySelector(".rc-slider-handle");
-            if (sliderHandle) {
-                observer.observe(sliderHandle, { attributes: true, attributeFilter: ['style'] });
-            }
-
-            return () => {
-                // Clean up observer on component unmount
-                if (sliderHandle) {
-                    observer.disconnect();
-                }
-            };
+          const observer = new MutationObserver(handleSliderChange);
+          const sliderHandles = document.getElementsByClassName("rc-slider-handle");
+    
+          Array.from(sliderHandles).forEach((sliderHandle) => {
+            observer.observe(sliderHandle, { attributes: true, attributeFilter: ['style'] });
+          });
+    
+          return () => {
+            observer.disconnect();
+          };
         }
     }, []);
 
