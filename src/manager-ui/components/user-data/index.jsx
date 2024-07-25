@@ -2,24 +2,25 @@
 
 import { Icons } from '@/icons'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
-const UserData = () => {
+const UserData = ({setTab}) => {
   
     return (
         <div className='p-[24px] bg-white border-[1px] border-solid border-borderColor w-full mb-[24px] rounded-[3px]'>
             <div className='flex w-full gap-[24px] justify-end items-center'>
                 <div className='flex items-center gap-[4px]'>
                     <Icons.stream fill={"#322C39"} />
-                    <p className='text-black text-[0.813rem] font-[400]'>live stream</p>
+                    <Link href={'/live'} className='text-black text-[0.813rem] font-[400]'>live stream</Link>
                 </div>
                 <div className='flex items-center gap-[4px]'>
                     <Icons.edit stroke={"#322C39"} />
-                    <p className='text-black text-[0.813rem] font-[400]'>Profile edit</p>
+                    <p onClick={() => setTab('profile-edit')} className='text-black cursor-pointer text-[0.813rem] font-[400]'>Profile edit</p>
                 </div>
                 <div className='flex items-center gap-[4px]'>
                     <Icons.logout fill="#F00" />
-                    <p className='text-black text-[0.813rem] font-[400]'>Log out</p>
+                <p style={{color: '#F00'}} className='text-[0.813rem] cursor-pointer font-[400]'>Log out</p>
                 </div>
             </div>
 

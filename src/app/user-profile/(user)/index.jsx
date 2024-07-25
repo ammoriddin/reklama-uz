@@ -27,13 +27,13 @@ const FirstRoleProfile = () => {
                 {/* User Profile Data */}
                 <div className='mb-[35px]'>
                     {
-                    value !== 'card' &&
-                    <UserData tab={value} setTab={setValue} />
+                        value !== 'card' &&
+                        <UserData tab={value} setTab={setValue} />
                     }
 
                     {
-                    value === 'card' &&
-                    <Card tab={value} setTab={setValue} />
+                        value === 'card' &&
+                        <Card tab={value} setTab={setValue} />
                     }
                 </div>
 
