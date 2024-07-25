@@ -12,18 +12,14 @@ const VerificationCodeInput = ({ length = 4 }) => {
     setCode(newCode);
 
     if (value && index < length - 1) {
-      if (typeof document !== 'undefined') {
         document.getElementById(`code-input-${index + 1}`).focus();
-      }
     }
   };
 
   const handleKeyDown = (e, index) => {
     if (e.key === 'Backspace' && code[index] === '') {
       if (index > 0) {
-        if (typeof document !== 'undefined') {
           document.getElementById(`code-input-${index - 1}`).focus();
-        }
       }
     }
   };
