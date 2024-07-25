@@ -47,7 +47,7 @@ const AddAdvertising = () => {
         }
 
         {
-            pathname === '/create-advertising/step-3' &&
+            (pathname === '/create-advertising/step-3' || '/create-advertising/step-2') &&
             <p className='text-black/30 text-[1rem] font-[400] mb-[68px]'>Reference site about giving information on its origins</p>
         }
 

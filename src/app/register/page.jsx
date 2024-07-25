@@ -16,7 +16,7 @@ const Register = () => {
     <section className='flex'>
 
         {/* Left Section */}
-        <section className='flex flex-col px-[150px] pb-[30px] w-[55%]'>
+        <section className='flex flex-col px-[90px] laptop:px-[150px] pb-[30px] w-[55%]'>
             <Link href={'/'} className='flex gap-[10px] mb-[40px] mt-[15px] items-center'>
               <Icons.logo width='42px' height='42px' />
               <h1 className='text-black text-[1.5rem] font-[800] leading-normal font-onest'>onest</h1>

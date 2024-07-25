@@ -28,7 +28,7 @@ module.exports = {
         onest: ['Onest', 'sans-serif'],
       },
       screens: {
-        'laptop': '1440px'
+        'laptop': '1441px'
       }
     },
   },
