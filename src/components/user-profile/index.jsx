@@ -13,7 +13,7 @@ const UserProfileSidebar = () => {
     const router = usePathname()
 
     return (
-        <div className='pr-[35px] pb-[16px] pt-[50px] h-[92vh] overflow-auto flex flex-col border-r-[1px] border-solid border-borderColor'>
+        <div className='pr-[35px] pb-[16px] relative pt-[50px] h-[92vh] overflow-auto flex flex-col border-r-[1px] border-solid border-borderColor'>
             <div className='flex-grow-[1]'>
 
                 {/* User Profile Data */}
@@ -32,9 +32,12 @@ const UserProfileSidebar = () => {
 
                 </div>
 
-                <div className='mb-[30px]'>
-                    <CustomButton widht={'w-full'} text={"Снять с баланса"} />
-                </div>
+                {
+                    router !== '/' &&
+                    <div className='mb-[30px]'>
+                        <CustomButton widht={'w-full'} text={"Снять с баланса"} />
+                    </div>
+                }
 
                 <ul className='pl-[12px] flex flex-col gap-[13px] mb-[31px]'>
                     {
@@ -163,7 +166,7 @@ const UserProfileSidebar = () => {
                 <div className='flex px-[10px] gap-[8px] items-center'>
                     
                     {/* App store */}
-                    <a className='flex px-[16px] py-[14px] rounded-[4px] primary-shadow items-center gap-[8px]'>
+                    <a className='flex px-[16px] py-[14px] bg-white rounded-[4px] primary-shadow items-center gap-[8px]'>
                         <Icons.apple fill="#121212" />
                         <div>
                             <p className='text-secondary/30 text-[0.75rem] leading-[13px] font-[400] '>Доступно в</p>
@@ -172,7 +175,7 @@ const UserProfileSidebar = () => {
                     </a>
 
                     {/* Play Market */}
-                    <a className='flex px-[16px] py-[14px] rounded-[4px] primary-shadow items-center gap-[8px]'>
+                    <a className='flex px-[16px] py-[14px] bg-white rounded-[4px] primary-shadow items-center gap-[8px]'>
                         <Icons.playMarket fill="#1F1714" />
                         <div>
                             <p className='text-secondary/30 text-[0.75rem] leading-[13px] font-[400] '>Скачайте в</p>
@@ -201,6 +204,14 @@ const UserProfileSidebar = () => {
                         <p className='text-black/60 text-[0.813rem] font-[400] leading-normal'>Privacy & Policy</p>
                         <p className='text-black/60 text-[0.813rem] font-[400] leading-normal'>Copyright 2023</p>
                     </div>
+                </div>
+            }
+
+            {
+                router === '/' &&
+                <div className=''>
+                    <Image className='absolute bottom-0 left-[-15px] -z-[20]' width={243} height={268} src={'/elements/iphone-12.png'} />
+                    <Image className='absolute bottom-0 right-[20px] -z-[20]' width={243} height={268} src={'/elements/second-phone.png'} />
                 </div>
             }
         </div>

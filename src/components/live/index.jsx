@@ -3,7 +3,7 @@ import React from 'react'
 
 const Video = () => {
   return (
-    <div className='2xl:w-[500px] w-full bg-white'>
+    <div className='w-[500px] bg-white'>
         
         {/* video */}
         <div className='bg-navbarBackground h-[75vh] relative'>

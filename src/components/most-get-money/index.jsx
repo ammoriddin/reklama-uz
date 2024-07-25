@@ -37,7 +37,7 @@ const MostGetMoney = ({ data }) => {
           ))
         }
         {remainingUsersCount > 0 && (
-          <div className='w-[42px] relative rounded-[50%] border-[1px] border-solid border-[white] shadow-sm h-[42px] bg-navbarBackground flex items-center justify-center'>
+          <div className='w-[42px] cursor-pointer relative rounded-[50%] border-[1px] border-solid border-[white] shadow-sm h-[42px] bg-navbarBackground flex items-center justify-center'>
             +{remainingUsersCount}
           </div>
         )}
