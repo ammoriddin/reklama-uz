@@ -1,5 +1,5 @@
 import React from 'react'
-import AdverTising from './(sidebar)'
+import AdverTising from '../../components/advertising-sidebar'
 import AddAdvertising from '@/components/add-advertising'
 
 const Advertising = () => {

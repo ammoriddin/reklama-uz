@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import FirstRoleProfile from './(user)'
+import FirstRoleProfile from '../../components/user-profile-section'
 import ManagerProfile from '@/manager-ui/pages/profile'
 import CompanyIsProfile from '@/company-ui/pages/profile'
 import FilterUserRols from '@/filter-rols/useUserRole/useUserRole'

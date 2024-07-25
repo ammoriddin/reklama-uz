@@ -3,11 +3,11 @@
 import { Icons } from '@/icons'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import Form from './(form)'
+import Form from '../../components/register-steps/register-form'
 import Image from 'next/image'
-import RegisterSteps from './(register-steps)'
-import Verification from './(verificaton)'
-import LastStep from './(last-step)'
+import RegisterSteps from '../../components/register-steps/register-steps'
+import Verification from '../../components/register-steps/verificaiton-section'
+import LastStep from '../../components/register-steps/register-last-step'
 
 const Register = () => {
   const [step, setStep] = useState(0)

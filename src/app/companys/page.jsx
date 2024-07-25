@@ -1,6 +1,6 @@
 import ManagerSidebar from '@/containers/manager-sidebar'
 import React from 'react'
-import CompanyCard from './(company-card)'
+import CompanyCard from '../../components/company-card'
 
 const Companys = () => {
   return (
