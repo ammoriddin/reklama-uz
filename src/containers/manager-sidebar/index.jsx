@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { sidebarLink } from './sidebarLink'
+import HomePageSidebar from '@/components/user-profile/home-page'
+import Image from 'next/image'  
 
 const ManagerSidebar = () => {
     const router = usePathname()
