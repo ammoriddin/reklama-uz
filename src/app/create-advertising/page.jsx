@@ -14,7 +14,6 @@ const Advertising = () => {
         <AddAdvertising />
       </section>
 
-      {/* Right Sidebar */}
     </section>
   )
 }
