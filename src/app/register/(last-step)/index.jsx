@@ -16,6 +16,7 @@ const LastStep = () => {
     
     useEffect(() => {
         localStorage.setItem('token', 'dasdasd')
+        localStorage.setItem('role', 1)
     }, [registerFinish])
 
     return (
