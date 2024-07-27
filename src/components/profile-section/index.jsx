@@ -27,7 +27,7 @@ const ProfileEditSection = () => {
     };
 
     return (
-        <div className='h-[61.5vh] overflow-auto w-[576px]'>
+        <div className='h-[65.5vh] overflow-auto w-[576px]'>
             {/* Profile Edit */}
             <form className='flex flex-col gap-[16px]'>
                 <div className='flex gap-[16px] w-full'>
