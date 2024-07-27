@@ -7,13 +7,13 @@ export const sidebarLink = [
         icon: Icons.user
     },
     {
-        name: 'Companiyalarim',
+        name: 'Reklamalarim',
         pathname: '/advertisments',
         icon: Icons.list
     },
     {
         name: 'SMM menedjerlarim',
-        pathname: '/managers',
+        pathname: '/my-managers',
         icon: Icons.user
     },
 ]

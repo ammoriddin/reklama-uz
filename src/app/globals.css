@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
 body,html {
     overflow: hidden;
 }

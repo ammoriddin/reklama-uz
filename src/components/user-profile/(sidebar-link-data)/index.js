@@ -8,7 +8,7 @@ export const sidebarLink = [
     },
     {
         name: 'SMM Menedjerlar',
-        pathname: '/menetter',
+        pathname: '/my-managers',
         icon: Icons.manager
     },
     {
