@@ -1027,4 +1027,27 @@ export const Icons = {
             />
         </svg>
     ),
+    hamkorBandLogo: (props) => (
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="19" 
+            height="17" 
+            viewBox="0 0 19 17" 
+            fill="none"
+            {...props}
+        >
+            <path 
+                fill-rule="evenodd" 
+                clip-rule="evenodd" 
+                d="M6.10142 3.45849H11.4234L5.32197 17H0L6.10142 3.45849Z" 
+                fill="inherit"
+            />
+            <path 
+                fill-rule="evenodd" 
+                clip-rule="evenodd" 
+                d="M13.678 0H19L12.8986 13.5415H7.57661L13.678 0Z" 
+                fill="inherit"
+            />
+        </svg>
+    )
 }

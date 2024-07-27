@@ -18,6 +18,10 @@ const UserData = ({setTab, tab}) => {
                     <button onClick={() => setTab('profile-edit')} className={`${tab === 'profile-edit' ? "text-purple" : "text-black"} text-[0.813rem] font-[400]`}>Profile edit</button>
                 </div>
                 <div className='flex items-center gap-[4px]'>
+                    <Icons.card fill={tab === "card" ? "#7000ff " : "#322C39"} />
+                    <button onClick={() => setTab('card')} className={`${tab === 'card' ? "text-purple" : "text-black"} text-[0.813rem] font-[400]`}>Card</button>
+                </div>
+                <div className='flex items-center gap-[4px]'>
                     <Icons.logout fill="#F00" />
                 <p style={{color: '#F00'}} className='text-[0.813rem] cursor-pointer font-[400]'>Log out</p>
                 </div>
