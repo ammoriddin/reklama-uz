@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const VerificationCodeInput = ({ length = 4 }) => {
   const [code, setCode] = useState(Array(length).fill(''));
+  const inputRefs = useRef([]);
 
   const handleChange = (e, index) => {
     const { value } = e.target;
@@ -12,28 +13,29 @@ const VerificationCodeInput = ({ length = 4 }) => {
     setCode(newCode);
 
     if (value && index < length - 1) {
-      if (typeof window !== 'undefined') {
-        document.getElementById(`code-input-${index + 1}`).focus();
-      }
+      inputRefs.current[index + 1].focus();
     }
   };
 
   const handleKeyDown = (e, index) => {
     if (e.key === 'Backspace' && code[index] === '') {
       if (index > 0) {
-        if (typeof window !== 'undefined') {
-          document.getElementById(`code-input-${index - 1}`).focus();
-        }
+        inputRefs.current[index - 1].focus();
       }
     }
   };
+
+  useEffect(() => {
+    // Focus the first input on mount
+    inputRefs.current[0].focus();
+  }, []);
 
   return (
     <div className="verification-code-input flex gap-[16px]">
       {code.map((digit, index) => (
         <input
           key={index}
-          id={`code-input-${index}`}
+          ref={(el) => (inputRefs.current[index] = el)}
           value={digit}
           onChange={(e) => handleChange(e, index)}
           onKeyDown={(e) => handleKeyDown(e, index)}
