@@ -1,6 +1,6 @@
 import Head from "next/head";
 import "./globals.css";
-import Navbar from "@/containers/navbar/inde";
+import Navbar from "@/containers/navbar/index";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
