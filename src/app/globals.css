@@ -162,3 +162,23 @@ input[type="radio"]:checked::after {
 textarea {
     outline: none;
 }
+
+.ant-select-selector {
+    min-width: 311px;
+    border: none !important;
+}
+
+.ant-select-arrow {
+    display: none !important;
+}
+
+.ant-select-selection-search-input {
+    color: rgba(50, 44, 57, 0.30) !important;
+    font-size: 1rem !important;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.ant-select-selection-search-input:focus {
+    border: none !important;
+}

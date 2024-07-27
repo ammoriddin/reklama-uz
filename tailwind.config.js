@@ -4,6 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/containers/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/filter-rols/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/company-ui/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/manager-ui/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/system-components/**/*.{js,ts,jsx,tsx,mdx}",

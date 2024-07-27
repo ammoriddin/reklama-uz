@@ -1,6 +1,7 @@
 import { Icons } from '@/icons'
 import React from 'react'
 import Categorie from '../categories'
+import { Select } from 'antd'
 
 const ChoseInterest = () => {
   return (
@@ -13,9 +14,20 @@ const ChoseInterest = () => {
                         <Icons.searchIcon width='20px' height='20px' />
                         <p className='text-black text-[1rem] font-[500]'>Спорт |</p>
                     </div>
-                    <div className='flex'>
-                        <Icons.arrow className='mr-[17px]' />
-                        <input type="text" />
+                    <div className='flex items-center'>
+                        <Icons.arrow fill='#000' />
+                        <Select
+                            showSearch
+                            placeholder="Type"
+                            filterOption={(input, option) =>
+                            (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+                            }
+                            options={[
+                            { value: '1', label: 'Jack' },
+                            { value: '2', label: 'Lucy' },
+                            { value: '3', label: 'Tom' },
+                            ]}
+                        />
                     </div>
                 </div>
 

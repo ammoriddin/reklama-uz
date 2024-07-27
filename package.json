@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^5.19.3",
     "chart.js": "^4.4.3",
     "next": "14.2.5",
     "rc-slider": "^11.1.1",
