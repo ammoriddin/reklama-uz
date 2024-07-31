@@ -41,7 +41,7 @@ const GiveAwaySection = () => {
     //     };
 
     //     if (typeof document !== 'undefined') {
-    //         // Observe changes to the slider handle
+    //         // Observe changes to the slider handle 
     //         const observer = new MutationObserver(handleSliderChange);
     //         const sliderHandle = document.querySelector(".rc-slider-handle");
     //         if (sliderHandle) {
