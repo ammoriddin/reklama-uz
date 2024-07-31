@@ -1,8 +1,10 @@
-import React from 'react'
-import AdverTising from '../../../components/advertising-sidebar'
-import AddAdvertising from '@/components/add-advertising'
+"use server"
 
-const AddAdvertisingSecondStep = () => {
+import React from 'react'
+import AddAdvertising from '@/components/add-advertising'
+import AdverTising from '@/components/advertising-sidebar'
+
+const AddAdvertisingThirdStep = () => {
   return (
     <section className='flex gap-[30px] px-[100px] laptop:px-[150px]'>
 
@@ -19,4 +21,4 @@ const AddAdvertisingSecondStep = () => {
   )
 }
 
-export default AddAdvertisingSecondStep
+export default AddAdvertisingThirdStep

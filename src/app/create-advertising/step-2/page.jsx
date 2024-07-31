@@ -1,6 +1,8 @@
+"use server"
+
 import React from 'react'
-import AdverTising from '../../../components/advertising-sidebar'
 import AddAdvertising from '@/components/add-advertising'
+import AdverTising from '@/components/advertising-sidebar'
 
 const AddAdvertisingSecondStep = () => {
   return (

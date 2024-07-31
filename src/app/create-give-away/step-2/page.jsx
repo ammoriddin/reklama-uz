@@ -1,8 +1,10 @@
+"use server"
+
 import GiveAwayStep2 from '@/components/give-away-section/step-2'
 import UserProfileSidebar from '@/components/user-profile'
 import React from 'react'
 
-const GiveAway = () => {
+const CreateGiveAwaySecondStep = () => {
   return (
     <section className='flex gap-[30px] px-[50px] laptop:px-[150px]'>
 
@@ -19,4 +21,4 @@ const GiveAway = () => {
   )
 }
 
-export default GiveAway
+export default CreateGiveAwaySecondStep

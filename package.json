@@ -4,15 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "antd": "^5.19.3",
+    "antd": "^5.19.4",
     "chart.js": "^4.4.3",
     "next": "14.2.5",
-    "rc-slider": "^11.1.1",
+    "rc-slider": "^11.1.5",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
