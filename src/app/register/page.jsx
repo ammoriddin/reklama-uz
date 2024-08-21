@@ -18,8 +18,7 @@ const Register = () => {
         {/* Left Section */}
         <section className='flex flex-col px-[90px] laptop:px-[150px] pb-[30px] w-[55%]'>
             <Link href={'/'} className='flex gap-[10px] mb-[40px] mt-[15px] items-center'>
-              <Icons.logo width='42px' height='42px' />
-              <h1 className='text-black text-[1.5rem] font-[800] leading-normal font-onest'>onest</h1>
+              <Icons.logo />
             </Link>
 
             {/* Register Steps */}
@@ -68,8 +67,7 @@ const Register = () => {
         {/* Right Section */}
         <section className='w-[45%] overflow-y-hidden h-[100vh] sticky top-0'>
           <div className='absolute flex top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'>
-            <Icons.logov2 width='90px' height='90px' className='mr-[11px]' />
-            <h2 className='font-onest text-[4rem] font-[800] leading-[normal] text-white'>onest</h2>
+            <Icons.logov2 />
           </div>
           <Image width={0} height={0} className='w-full h-full object-container object-top' src={'/login-images/first-photo.jpg'} />
         </section>

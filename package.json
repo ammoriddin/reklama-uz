@@ -11,6 +11,7 @@
   "dependencies": {
     "antd": "^5.19.4",
     "chart.js": "^4.4.3",
+    "framer-motion": "^11.3.28",
     "next": "14.2.5",
     "rc-slider": "^11.1.5",
     "react": "^18",

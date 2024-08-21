@@ -17,7 +17,7 @@ const HomePage = () => {
       <FilterUserRols firstComponent={<UserProfileSidebar />} secondComponent={<ManagerSidebar />} thirdComponent={<CompanySidebar />} />
 
       {/* Main Contnet */}
-      <section className='pt-[20px] h-[93vh] flex-grow-[1]'>
+      <section className='pt-[20px] pb-[30px] h-[93vh] flex-grow-[1]'>
         <ReelsSection />
       </section>
 

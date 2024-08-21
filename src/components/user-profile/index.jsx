@@ -13,7 +13,7 @@ const UserProfileSidebar = () => {
     const router = usePathname()
 
     return (
-        <div className='pr-[35px] pb-[16px] relative pt-[50px] h-[92vh] overflow-auto flex flex-col border-r-[1px] border-solid border-borderColor'>
+        <div className='pr-[35px] pb-[16px] relative pt-[50px] h-[86.5vh] overflow-auto flex flex-col border-r-[1px] border-solid border-borderColor'>
             <div className='flex-grow-[1]'>
 
                 {/* User Profile Data */}

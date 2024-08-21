@@ -5,11 +5,11 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import UserMessage from '../user-message'
 
-const Reklama = () => {
+const Reklama = ({reel}) => {
   const [coment, setComent] = useState(false)
 
   return (
-    <div className='w-[500px] h-[88vh] bg-navbarBackground reels-shadow'>
+    <div className={`w-[500px] h-[88vh] bg-navbarBackground reels-shadow`}>
       <div className='w-full h-[90%] relative'>
         {
           coment == false && 
@@ -50,7 +50,7 @@ const Reklama = () => {
         }
       </div>
 
-      <div className='bg-white flex px-[25px] py-[12px] items-center justify-between w-full h-[10%]'>
+      <div className='bg-white flex px-[25px]  items-center justify-between w-[450px] h-[10%]'>
         <div className='flex items-center gap-[24px]'>
 
           {/* Like */}
@@ -76,7 +76,7 @@ const Reklama = () => {
         <div className='flex flex-col gap-[16px]'>
           <div className='flex items-center gap-[4px]'>
             <Icons.grayEye width='15px' height='15px' fill='#322C3980' />
-            <span className='text-black/40 text-[0.813rem] font-[400]'>123948</span>
+            <span className='text-black/40 text-[0.813rem] font-[400]'>{reel}</span>
           </div>
 
           <Icons.save fill='#322C39' className='block ml-auto cursor-pointer' />
