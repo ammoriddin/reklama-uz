@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import UserProfileSidebar from '../user-profile'
 import ReelsSection from '../reels'
 import RightSidebar from './right-sidebar'
