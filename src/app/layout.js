@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/containers/navbar/index";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Create Next App",
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
       </Head>
       <body>
         <ToastContainer />
-        <Navbar />
+        <Suspense fallback={<>Loading...</>}>
+          <Navbar />
+        </Suspense>
         <main>
           {children}
         </main>
