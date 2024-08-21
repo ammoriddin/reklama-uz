@@ -17,8 +17,7 @@ const Navbar = () => {
     <nav className='py-[17px] border-b-[1px] border-borderColor border-solid px-[20px] min-w-[1218px] flex items-center'>
       {/* logo */}
       <Link href={'/'} className='flex gap-[10px] items-center'>
-        <Icons.logo className="w-[32px] h-[32px]" />
-        <h1 className='text-black text-[1.5rem] font-[800] leading-normal font-onest'>onest</h1>
+        <Icons.logo />
       </Link>
 
       <div className='flex items-center ml-[188px] laptop:ml-[288px] gap-[4px] flex-grow-[1]'>
