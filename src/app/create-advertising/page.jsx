@@ -1,5 +1,3 @@
-"use server"
-
 import React, { Suspense } from 'react'
 import AddAdvertising from '@/components/add-advertising'
 import AdverTising from '@/components/advertising-sidebar'

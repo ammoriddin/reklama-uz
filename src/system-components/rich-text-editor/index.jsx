@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import ReactQuill from 'react-quill';
+import dynamic from 'next/dynamic';
+import { useState } from 'react';
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 import 'react-quill/dist/quill.snow.css'; // import styles
 
 const RichTextEditor = () => {
@@ -26,7 +27,7 @@ const RichTextEditor = () => {
 
   return (
     <div>
-      <ReactQuill 
+      <ReactQuill
         value={value}
         onChange={setValue}
         modules={modules}

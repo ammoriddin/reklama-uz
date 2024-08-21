@@ -1,5 +1,3 @@
-"use server"
-
 import GiveAwayStep2 from '@/components/give-away-section/step-2'
 import UserProfileSidebar from '@/components/user-profile'
 import React from 'react'

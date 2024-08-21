@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ViewsCount from './views-count'
 import CustomInput from '@/system-components/input'
 import CustomButton from '@/system-components/button'

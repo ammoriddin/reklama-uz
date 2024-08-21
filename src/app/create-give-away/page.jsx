@@ -1,8 +1,5 @@
-"use server"
-
 import GiveAwaySection from '@/components/give-away-section'
 import ManagerSidebar from '@/containers/manager-sidebar'
-import React from 'react'
 
 const GiveAway = () => {
   return (
