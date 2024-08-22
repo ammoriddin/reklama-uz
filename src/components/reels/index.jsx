@@ -3,7 +3,64 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Reklama from '../reklama'
 
-const ReelsSection = ({ reels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }) => {
+const ReelsSection = ({ reels = [
+  {
+    "id": 1,
+    "type": "image",
+    "url": "/posts/uzum-market-post.webp",
+    "views": 139,
+    "comments": 34,
+    "shares": 47
+  },
+  {
+    "id": 2,
+    "type": "video",
+    "url": "/reklama/reklama.mp4",
+    "views": 256,
+    "comments": 52,
+    "shares": 67
+  },
+  {
+    "id": 4,
+    "type": "video",
+    "url": "/reklama/reklama2.mp4",
+    "views": 402,
+    "comments": 89,
+    "shares": 112
+  },
+  {
+    "id": 1,
+    "type": "image",
+    "url": "/posts/uzum-market-post.webp",
+    "views": 139,
+    "comments": 34,
+    "shares": 47
+  },
+  {
+    "id": 2,
+    "type": "video",
+    "url": "/reklama/reklama4.mp4",
+    "views": 256,
+    "comments": 52,
+    "shares": 67
+  },
+  {
+    "id": 3,
+    "type": "video",
+    "url": "/reklama/reklama5.mp4",
+    "views": 98,
+    "comments": 14,
+    "shares": 23
+  },
+  {
+    "id": 4,
+    "type": "video",
+    "url": "/reklama/reklama3.mp4",
+    "views": 402,
+    "comments": 89,
+    "shares": 112
+  }
+] }) => {
   const [sliceStart, setSliceStart] = useState([0, 3])
   const slicedReels = reels.slice(sliceStart[0], sliceStart[1])
   const [animate, setAnimate] = useState(false)
@@ -56,7 +113,7 @@ const ReelsSection = ({ reels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }) => {
               transition: 'top 0.5s ease, opacity 0.5s ease',
             }}
           >
-            <Reklama />
+            <Reklama reel={reel} />
           </div>
         ))
       }

@@ -78,7 +78,7 @@ canvas {
     transform: rotate(90deg);
     left: -4px;
     z-index: 15;
-    top: -9px;
+    top: -7px;
 }
 
 .user-dropdown-drop-shadow {

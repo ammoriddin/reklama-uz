@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
+    images: {
+        domains: ['img.freepik.com','cdn.pixabay.com'], // Add other allowed domains here
+    },
     reactStrictMode: true,
 };
 

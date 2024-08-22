@@ -16,7 +16,7 @@ const MostGetMoney = ({ data }) => {
           visibleUsers.map((item, index) => (
             <div
               key={index}
-              className='w-[42px] h-[42px] p-[1px] bg-white rounded-[50%] mr-[-15px] shadow-sm relative'
+              className='w-[42px] h-[42px] p-[3px] bg-white rounded-[50%] mr-[-15px] shadow-sm relative'
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -37,7 +37,7 @@ const MostGetMoney = ({ data }) => {
           ))
         }
         {remainingUsersCount > 0 && (
-          <div className='w-[42px] cursor-pointer relative rounded-[50%] border-[1px] border-solid border-[white] shadow-sm h-[42px] bg-navbarBackground flex items-center justify-center'>
+          <div className='w-[42px] cursor-pointer relative rounded-[50%] border-[3px] border-solid border-[white] shadow-sm h-[42px] bg-navbarBackground flex items-center justify-center'>
             +{remainingUsersCount}
           </div>
         )}

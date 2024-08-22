@@ -52,15 +52,15 @@ const RightSidebar = () => {
         </div>
 
         <div className='flex-grow-[1]'>
-            <a className='flex items-center mb-[15px] gap-[8px]' href="https://reklama-khamidullayev.netlify.app">
+            <a target='_blank' className='flex items-center mb-[15px] gap-[8px]' href="https://https://uzum.uz/ru">
                 <p className='text-black text-[0.813rem] font-[500'>www.uzummarket.uz</p>
                 <Icons.arrow fill='#322C39' width='14px' height='14px' />
             </a>
             <hr className='w-[200px] mb-[15px]' />
-            <a className='flex items-center mb-[15px] gap-[8px]' href="https://reklama-khamidullayev.netlify.app">
+            <Link className='flex items-center mb-[15px] gap-[8px]' href="/order/214213o95">
                 <p className='text-purple text-[0.813rem] font-[500'>Buyurtma berish</p>
                 <Icons.arrow fill='#7000ff' width='14px' height='14px' />
-            </a>
+            </Link>
         </div>
 
         <div>
