@@ -62,15 +62,14 @@ const ReelsSection = ({ reels = [
   }
 ] }) => {
   const [sliceStart, setSliceStart] = useState([0, 3])
-  const slicedReels = reels.slice(sliceStart[0], sliceStart[1])
   const [animate, setAnimate] = useState(false)
+  const [rearrange, setRearrange] = useState(false)
   const sectionRef = useRef(null)
+  const [circularReels, setCircularReels] = useState(reels)
 
   const handleScroll = (event) => {
-    if (event.deltaY > 0) {
+    if (event.deltaY > 0 && !animate && !rearrange) {
       setAnimate(true)
-    } else {
-      return
     }
   }
 
@@ -90,27 +89,43 @@ const ReelsSection = ({ reels = [
 
   useEffect(() => {
     if (animate) {
-      const timeout = setTimeout(() => {
-        setSliceStart([sliceStart[0] + 1, sliceStart[1] + 1])
+      // First animate the top reel upward
+      const animateTimeout = setTimeout(() => {
+        setRearrange(true)
         setAnimate(false)
-      }, 500) // This timeout should match the transition duration
-
-      return () => clearTimeout(timeout)
+      }, 500) // Duration of the upward animation
+      
+      return () => clearTimeout(animateTimeout)
     }
-  }, [animate])
+  }, [animate]);
+
+  useEffect(() => {
+    if (rearrange) {
+      const rearrangeTimeout = setTimeout(() => {
+        setCircularReels((prevReels) => {
+          const firstReel = prevReels[0];
+          const newReels = [...prevReels.slice(1), firstReel];
+          return newReels;
+        });
+        setRearrange(false)
+      }, 500) // Duration of the downward animation and rearrange
+
+      return () => clearTimeout(rearrangeTimeout)
+    }
+  }, [rearrange]);
 
   return (
     <section ref={sectionRef} className='relative z-[99] w-full items-center flex flex-col'>
       {
-        slicedReels.map((reel, index) => (
+        circularReels.slice(sliceStart[0], sliceStart[1]).map((reel, index) => (
           <div 
             key={index}
-            className={`absolute transition-all duration-500 ease-in-out ${index === 0 && animate ? 'translate-y-[-2rem] opacity-0' : ''}`}
+            className={`absolute transition-all ease-in-out duration-${index === 0 ? '500' : '500'}`}
             style={{
               zIndex: 999 - index,
-              transform: `scale(${0.97 - index * 0.03})`,
-              top: `${index * 1.5}rem`,
-              transition: 'top 0.5s ease, opacity 0.5s ease',
+              transform: `${index === 0 && animate ? 'translateY(-20px)' : rearrange && index === 0 ? 'translateY(80px)' : `scale(${0.97 - index * 0.03})`}`,
+              top: `${rearrange && index > 0 ? `${(index - 1) * 1.5}rem` : `${index * 1.5}rem`}`,
+              transition: 'all 0.5s ease',
             }}
           >
             <Reklama reel={reel} />
