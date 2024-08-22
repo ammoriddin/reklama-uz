@@ -3,69 +3,19 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Reklama from '../reklama'
 
-const ReelsSection = ({ reels = [
-  {
-    "id": 1,
-    "type": "image",
-    "url": "/posts/uzum-market-post.webp",
-    "views": 139,
-    "comments": 34,
-    "shares": 47
-  },
-  {
-    "id": 2,
-    "type": "video",
-    "url": "/reklama/reklama.mp4",
-    "views": 256,
-    "comments": 52,
-    "shares": 67
-  },
-  {
-    "id": 4,
-    "type": "video",
-    "url": "/reklama/reklama2.mp4",
-    "views": 402,
-    "comments": 89,
-    "shares": 112
-  },
-  {
-    "id": 1,
-    "type": "image",
-    "url": "/posts/uzum-market-post.webp",
-    "views": 139,
-    "comments": 34,
-    "shares": 47
-  },
-  {
-    "id": 2,
-    "type": "video",
-    "url": "/reklama/reklama4.mp4",
-    "views": 256,
-    "comments": 52,
-    "shares": 67
-  },
-  {
-    "id": 3,
-    "type": "video",
-    "url": "/reklama/reklama5.mp4",
-    "views": 98,
-    "comments": 14,
-    "shares": 23
-  },
-  {
-    "id": 4,
-    "type": "video",
-    "url": "/reklama/reklama3.mp4",
-    "views": 402,
-    "comments": 89,
-    "shares": 112
-  }
-] }) => {
+const ReelsSection = ({ reels = [], setCurrentReel }) => {
   const [sliceStart, setSliceStart] = useState([0, 3])
   const [animate, setAnimate] = useState(false)
   const [rearrange, setRearrange] = useState(false)
   const sectionRef = useRef(null)
   const [circularReels, setCircularReels] = useState(reels)
+
+  useEffect(() => {
+    // Boshlang'ich qiymatni o'rnatish
+    if (circularReels.length > 0) {
+      setCurrentReel(circularReels[0]);  // Dastlabki reelni o'rnatish
+    }
+  }, [circularReels, setCurrentReel]);
 
   const handleScroll = (event) => {
     if (event.deltaY > 0 && !animate && !rearrange) {
@@ -105,6 +55,7 @@ const ReelsSection = ({ reels = [
         setCircularReels((prevReels) => {
           const firstReel = prevReels[0];
           const newReels = [...prevReels.slice(1), firstReel];
+          setCurrentReel(newReels[0]);  // Update the current reel
           return newReels;
         });
         setRearrange(false)
