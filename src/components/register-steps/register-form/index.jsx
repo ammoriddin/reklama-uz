@@ -30,7 +30,7 @@ const Form = ({setStep}) => {
                 <CustomInput placeholder={'User Name'} value={userName} setValue={setUserName} />
                 <DateInput placeholder={'Enter your age'} value={date} setValue={setDate} />
                 <CustomInput placeholder={'Country'} value={country} setValue={setCountry} />
-                <CustomInput placeholder={'Create your password'} value={password} setValue={setPassword} />
+                <CustomInput type='password' placeholder={'Create your password'} value={password} setValue={setPassword} />
             </div>
 
             {/* Gender */}
