@@ -37,7 +37,7 @@ const Reklama = ({ reel }) => {
           />
         )}
         {coment && (
-          <div className='w-full h-full bg-white p-[24px] relative'>
+          <div className='w-[auto] h-[95%] bg-white overflow-auto p-[24px] relative'>
             <p className='text-[0.938rem] font-[500] mb-[23px]'>Comments 12</p>
             <div className='flex flex-col gap-[20px] h-[88%] overflow-auto mb-[20px]'>
               {/* Render user comments here */}

@@ -24,10 +24,10 @@ const MostGetMoney = ({ data }) => {
               {
                 hoveredIndex === index &&
                 <div className='absolute bottom-[0] left-[13px] user-dropdown-drop-shadow'>
-                  <div className='absolute top-[-10px] left-0 three-corner-element'></div>
+                  <div className='absolute left-0 three-corner-element'></div>
                   <div className='bg-white rounded-b-[6px] py-[12px] z-[12] px-[18px] absolute'>
                     <h4 className='text-black/20 text-[0.75rem] font-[400] leading-[14px] mb-[2px]'>
-                        Abubakir
+                      Abubakir
                     </h4>
                     <p className='text-black text-[0.875rem] leading-[17px] font-[500] min-w-[150px]'>12 000 000 so'm</p>
                   </div>
