@@ -1,10 +1,22 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
 import Form from '../../components/login-form'
 import Link from 'next/link'
 import { Icons } from '@/icons'
+import { useRouter } from 'next/navigation'
 
 const Page = () => {
+  const router = useRouter()
+
+  const handleRoleSelection = (role) => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('role', role);
+      localStorage.setItem('token', 'asdfadfadsf');
+      router.push("/")
+    }
+  };
 
   return (
     <section className='flex justify-between'>
@@ -17,13 +29,23 @@ const Page = () => {
 
             <div>
                 <h1 className='text-black text-[2.625rem] font-[500] leading-normal mb-[12px]'>Login page</h1>
-                <p className='text-black/30 text-[1rem] font-[400] leading-normal mb-[43px]'>Dont have an accaunt, <Link href={'/register'} className='text-purple'>register</Link></p>
+                <p className='text-black/30 text-[1rem] font-[400] leading-normal mb-[43px]'>Don't have an account? <Link href={'/register'} className='text-purple'>Register</Link></p>
                 <Form />
             </div>
 
             <div>
-              <a className='text-primary cursor-pointer text-[0.813rem] font-[400] leading-normal hover:underline transition-all hover:text-purple mb-[8px]'>Для SMM-менеджеров</a>
-              <p className='text-primary text-[0.813rem] font-[400] leading-normal mb-[22px]'>Для предприятия</p>
+              <button
+                onClick={() => handleRoleSelection(2)}
+                className='text-primary block cursor-pointer text-[0.813rem] font-[400] leading-normal hover:underline transition-all hover:text-purple mb-[8px]'
+              >
+                Для SMM-менеджеров
+              </button>
+              <button
+                onClick={() => handleRoleSelection(3)}
+                className='text-primary cursor-pointer text-[0.813rem] font-[400] leading-normal mb-[22px]'
+              >
+                Для предприятия
+              </button>
 
               <div className='flex gap-[20px] mb-[14px]'>
                 <Link href={'/help'} className='text-primary text-[0.813rem] font-[400] leading-normal'>
