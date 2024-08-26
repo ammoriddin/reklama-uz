@@ -3,39 +3,66 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const Reklama = ({ reel }) => {
   const [coment, setComent] = useState(false);
-  const videoRef = useRef(null);
+  const mainVideoRef = useRef(null);
+  const backgroundVideoRef = useRef(null);
 
   useEffect(() => {
-    if (reel.type === 'video' && videoRef.current) {
-      videoRef.current.play();  // Auto-play the video when the component mounts
+    if (reel.type === 'video' && mainVideoRef.current) {
+      mainVideoRef.current.play();  // Auto-play the main video when the component mounts
+      if (backgroundVideoRef.current) {
+        backgroundVideoRef.current.play(); // Auto-play the background video as well
+      }
     }
   }, [reel]);
 
   const handleVideoClick = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
+    if (mainVideoRef.current.paused) {
+      mainVideoRef.current.play();
+      if (backgroundVideoRef.current) {
+        backgroundVideoRef.current.play();
+      }
     } else {
-      videoRef.current.pause();
+      mainVideoRef.current.pause();
+      if (backgroundVideoRef.current) {
+        backgroundVideoRef.current.pause();
+      }
     }
   };
 
   return (
     <div className={`w-[500px] h-[88vh] bg-navbarBackground reels-shadow`}>
-      <div className='w-full h-[90%] relative'>
+      <div className='w-full h-[90%] relative overflow-hidden'>
         {!coment && reel.type === 'image' && (
-          <img src={reel.url} alt='Reel' className='w-full h-full object-contain object-center' />
+          <img src={reel.url} alt='Reel' className='w-full h-full relative z-[2] object-contain object-center' />
         )}
         {!coment && reel.type === 'video' && (
           <video 
-            ref={videoRef} 
+            ref={mainVideoRef} 
             src={reel.url} 
-            className='w-full h-full object-contain object-center' 
+            className='w-full h-full relative cursor-pointer z-[2] object-contain object-center' 
             onClick={handleVideoClick} 
             loop 
             muted 
-            playsInline 
+            playsInline
+            autoPlay 
           />
         )}
+
+        {!coment && reel.type === 'image' && (
+          <img src={reel.url} alt='Reel' className='w-full absolute top-0 blur-sm left-0 z-[1] h-full object-cover object-center' />
+        )}
+        {!coment && reel.type === 'video' && (
+          <video 
+            ref={backgroundVideoRef} 
+            src={reel.url} 
+            className='w-full absolute top-0 blur-sm cursor-pointer left-0 h-full object-cover z-[1] object-center' 
+            loop 
+            muted 
+            playsInline
+            autoPlay 
+          />
+        )}
+
         {coment && (
           <div className='w-[auto] h-[95%] bg-white overflow-auto p-[24px] relative'>
             <p className='text-[0.938rem] font-[500] mb-[23px]'>Comments 12</p>

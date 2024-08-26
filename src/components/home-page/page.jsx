@@ -13,16 +13,6 @@ const HomePage = () => {
 
   const reels = [
     {
-      "id": 1,
-      "type": "image",
-      "url": "/posts/uzum-market-post.webp",
-      "views": 139,
-      "comments": 34,
-      "shares": 47,
-      "tags": ['#marketing','#ingiliz tili','#dasturlash','#ichimliklar','#kiyimkechak'],
-      "description": 'Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. ence site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.'
-    },
-    {
       "id": 2,
       "type": "video",
       "url": "/reklama/reklama.mp4",
@@ -51,6 +41,16 @@ const HomePage = () => {
       "shares": 47,
       "tags": ['#marketing','#ingiliz tili','#dasturlash','#ichimliklar','#kiyimkechak'],
       "description": 'Refipsum generator.Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information onerator.'
+    },
+    {
+      "id": 1,
+      "type": "image",
+      "url": "/posts/uzum-market-post.webp",
+      "views": 139,
+      "comments": 34,
+      "shares": 47,
+      "tags": ['#marketing','#ingiliz tili','#dasturlash','#ichimliklar','#kiyimkechak'],
+      "description": 'Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. ence site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.'
     },
     {
       "id": 2,
