@@ -4,7 +4,7 @@ import React from 'react'
 const MessageCard = ({image, name, isSubscribe}) => {
   return (
     <div className='flex items-center'>
-        <Image src={image} width={54} height={54} className='mr-[10px] w-[54px] h-[54px] rounded-[50%] object-contain object-center' />
+        <Image alt='image' src={image} width={54} height={54} className='mr-[10px] w-[54px] h-[54px] rounded-[50%] object-contain object-center' />
         <div className='flex w-full justify-between items-center border-borderColor pb-[10px] mb-[-10px] border-solid border-b-[1px]'>
             <div>
                 <h4 className='text-black text-[1.125rem] font-[400]'>{name}</h4>

@@ -154,7 +154,7 @@ const RecomendedManager = () => {
         <div className='flex flex-col gap-[30px]'>
           {
             managers.map((item,index) => (
-              <RecomendedUser image={item.image} position={'SMM Manager'} name={item.name} isSubscribed={item.isSubscribe} companys={item.companys} />
+              <RecomendedUser key={index} image={item.image} position={'SMM Manager'} name={item.name} isSubscribed={item.isSubscribe} companys={item.companys} />
             ))
           }
         </div>

@@ -24,7 +24,7 @@ const InboxSection = () => {
     <section className='flex gap-[33px] pb-[35px] flex-col max-w-[800px]'>
       {
         messages.map((item, index) => (
-          <MessageCard image={item.image} isSubscribe={item.isSubscribe} name={item.name} />
+          <MessageCard key={index} image={item.image} isSubscribe={item.isSubscribe} name={item.name} />
         ))
       }
     </section>

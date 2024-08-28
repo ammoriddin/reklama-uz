@@ -9,7 +9,7 @@ const RightSidebar = () => {
 
                 {/* SMM Manager Photo */}
                 <div className='w-[50px] h-[50px]'>
-                    <Image src={'/companys/bmw.png'} width={50} height={50} />
+                    <Image alt='bmw photo' src={'/companys/bmw.png'} width={50} height={50} />
                 </div>
 
                 {/* Manager Name */}

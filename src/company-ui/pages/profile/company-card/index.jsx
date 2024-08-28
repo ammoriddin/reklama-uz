@@ -39,7 +39,7 @@ const CompanyCard = ({tab, setTab}) => {
 
         <div className='flex items-center justify-between'>
             <h4 className='text-black text-[1.5rem] font-[500]'>Shaxriyor Oripov</h4>
-            <Image src={'/uzcard.png'} className='w-[64px] h-[64px]' width={64} height={64} />
+            <Image alt='uzcard-photo' src={'/uzcard.png'} className='w-[64px] h-[64px]' width={64} height={64} />
         </div>
 
     </div>

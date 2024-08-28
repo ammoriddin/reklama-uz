@@ -69,7 +69,7 @@ const Register = () => {
           <div className='absolute flex top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]'>
             <Icons.logov2 />
           </div>
-          <Image width={0} height={0} className='w-full h-full object-container object-top' src={'/login-images/first-photo.jpg'} />
+          <Image alt='login photo' width={0} height={0} className='w-full h-full object-container object-top' src={'/login-images/first-photo.jpg'} />
         </section>
     </section>
   )

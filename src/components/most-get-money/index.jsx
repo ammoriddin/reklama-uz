@@ -20,7 +20,7 @@ const MostGetMoney = ({ data }) => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <Image src={item.image} width={42} height={42} className='w-full h-full object-cover object-center rounded-[50%]' />
+              <Image alt='image' src={item.image} width={42} height={42} className='w-full h-full object-cover object-center rounded-[50%]' />
               {
                 hoveredIndex === index &&
                 <div className='absolute bottom-[0] left-[13px] user-dropdown-drop-shadow'>

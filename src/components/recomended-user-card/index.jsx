@@ -10,7 +10,7 @@ const RecomendedUser = ({ image, name, position, isSubscribed, companys }) => {
     <div className='w-full flex justify-between items-center'>
       <div className='flex gap-[10px] items-center relative w-full'>
         <div className={`bg-white w-[54px] h-[54px]`}>
-            <Image className='w-full h-full object-cover object-center rounded-[50%]' width={54} height={54} src={image} />
+            <Image alt='image' className='w-full h-full object-cover object-center rounded-[50%]' width={54} height={54} src={image} />
         </div>
 
         <div className='border-b-[1px] border-solid border-borderColor w-full pb-[10px] flex items-center'>
@@ -23,7 +23,7 @@ const RecomendedUser = ({ image, name, position, isSubscribed, companys }) => {
             {
               companys.map((item, index) => (
                 <div key={index} className='border-[4px] border-solid border-white w-[30px] rounded-[50%] mr-[-10px] h-[30px]'>
-                  <Image width={30} height={30} className='w-full h-full rounded-[50%]' src={item.image} />
+                  <Image alt='image' width={30} height={30} className='w-full h-full rounded-[50%]' src={item.image} />
                 </div>
               ))
             }

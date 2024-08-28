@@ -7,7 +7,7 @@ const CompanyCard = ({img, companyName, companyPosition, videos, link}) => {
         <div className='flex gap-[10px] items-center'>
 
             <div className='w-[50px] h-[50px]'>
-                <Image width={50} height={50} src={img} />
+                <Image alt='image' width={50} height={50} src={img} />
             </div>
 
             <div>

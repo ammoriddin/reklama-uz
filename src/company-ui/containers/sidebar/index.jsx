@@ -61,7 +61,7 @@ const CompanySidebar = () => {
 
                                 {/* profile photo */}
                                 <div className='w-[36px] h-[36px] flex-shrink-0'>
-                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                    <Image alt='company photo' className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
                                 </div>
 
                                 <div>
@@ -74,7 +74,7 @@ const CompanySidebar = () => {
 
                                 {/* profile photo */}
                                 <div className='w-[36px] h-[36px] flex-shrink-0'>
-                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                    <Image alt='company photo' className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
                                 </div>
 
                                 <div>
@@ -87,7 +87,7 @@ const CompanySidebar = () => {
 
                                 {/* profile photo */}
                                 <div className='w-[36px] h-[36px] flex-shrink-0'>
-                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                    <Image alt='company photo' className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
                                 </div>
 
                                 <div>
@@ -100,7 +100,7 @@ const CompanySidebar = () => {
 
                                 {/* profile photo */}
                                 <div className='w-[36px] h-[36px] flex-shrink-0'>
-                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                    <Image alt='company photo' className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
                                 </div>
 
                                 <div>
@@ -113,7 +113,7 @@ const CompanySidebar = () => {
 
                                 {/* profile photo */}
                                 <div className='w-[36px] h-[36px] flex-shrink-0'>
-                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                    <Image alt='company photo' className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
                                 </div>
 
                                 <div>
@@ -126,7 +126,7 @@ const CompanySidebar = () => {
 
                                 {/* profile photo */}
                                 <div className='w-[36px] h-[36px] flex-shrink-0'>
-                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                    <Image alt='company photo' className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
                                 </div>
 
                                 <div>
@@ -139,7 +139,7 @@ const CompanySidebar = () => {
 
                                 {/* profile photo */}
                                 <div className='w-[36px] h-[36px] flex-shrink-0'>
-                                    <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+                                    <Image alt='company photo' className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
                                 </div>
 
                                 <div>
@@ -208,8 +208,8 @@ const CompanySidebar = () => {
             {
                 pathname === '/' &&
                 <div className=''>
-                    <Image className='absolute bottom-0 left-[-15px] -z-[20]' width={243} height={268} src={'/elements/iphone-12.png'} />
-                    <Image className='absolute bottom-0 right-[20px] -z-[20]' width={243} height={268} src={'/elements/second-phone.png'} />
+                    <Image alt='iphone photo' className='absolute bottom-0 left-[-15px] -z-[20]' width={243} height={268} src={'/elements/iphone-12.png'} />
+                    <Image alt='iphone photo' className='absolute bottom-0 right-[20px] -z-[20]' width={243} height={268} src={'/elements/second-phone.png'} />
                 </div>
             }
         </div>
