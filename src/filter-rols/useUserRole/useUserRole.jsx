@@ -14,7 +14,8 @@ const FilterUserRols = ({ firstComponent, secondComponent, thirdComponent }) => 
         if (userRole) {
             setRole(parseInt(userRole, 10))
         } else {
-            router.push('/login')
+            // router.push('/login')
+            router.push('/')
         }
     }, [router])
 

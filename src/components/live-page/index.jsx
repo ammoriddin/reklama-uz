@@ -1,6 +1,6 @@
 "use client"
 
-import useUserRegister from '@/hooks/useUserRegister/useUserRegister'
+// import useUserRegister from '@/hooks/useUserRegister/useUserRegister'
 import React from 'react'
 import LiveSection from '../live-section'
 import RightSidebar from './(right-sidebar)'
@@ -12,7 +12,7 @@ import FilterUserRols from '@/filter-rols/useUserRole/useUserRole'
 
 const LivePage = () => {
 
-    useUserRegister()
+    // useUserRegister()
 
     return (
         <section className='flex gap-[30px] px-[50px] laptop:px-[150px]'>
