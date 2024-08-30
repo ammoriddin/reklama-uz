@@ -139,8 +139,8 @@ const FilterUserRols = ({ firstComponent, secondComponent, thirdComponent }) => 
                     </div>
 
                     <div className=''>
-                        <Image className='absolute bottom-0 left-[-15px] -z-[20]' width={243} height={268} src={'/elements/iphone-12.png'} />
-                        <Image className='absolute bottom-0 right-[20px] -z-[20]' width={243} height={268} src={'/elements/second-phone.png'} />
+                        <Image alt='iphone photo' className='absolute bottom-0 left-[-15px] -z-[20]' width={243} height={268} src={'/elements/iphone-12.png'} />
+                        <Image alt='iphone photo' className='absolute bottom-0 right-[20px] -z-[20]' width={243} height={268} src={'/elements/second-phone.png'} />
                     </div>
                 </div>
             </div>

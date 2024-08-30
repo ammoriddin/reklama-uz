@@ -14,7 +14,7 @@ const Inbox = () => {
 
         {/* Main Contnet */}
         <section className='pt-[20px] overflow-auto pb-[40px] h-[93vh] flex-grow-[1]'>
-            <InboxSection />
+          <InboxSection />
         </section>
     </section>
   )

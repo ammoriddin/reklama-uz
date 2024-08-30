@@ -78,7 +78,7 @@ canvas {
     transform: rotate(90deg);
     left: -4px;
     z-index: 15;
-    top: -9px;
+    top: -7px;
 }
 
 .user-dropdown-drop-shadow {
@@ -189,4 +189,15 @@ textarea {
 
 .ant-select-selection-search-input:focus {
     border: none !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url('../../public/date-icon.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+    cursor: pointer;
 }

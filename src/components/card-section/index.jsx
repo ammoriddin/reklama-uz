@@ -19,7 +19,7 @@ const Card = ({tab, setTab}) => {
   return (
     <>
       <div className='w-full relative rounded-[8px] p-[24px] overflow-hidden mb-[30px]'>
-        <Image src={'/card/cardbg.jpg'} width={0} height={0} className='w-full -z-[11] h-full absolute top-0 left-0 object-cover object-left-top' />
+        <Image alt='card background' src={'/card/cardbg.jpg'} width={0} height={0} className='w-full -z-[11] h-full absolute top-0 left-0 object-cover object-left-top' />
         <div className='w-full flex justify-end gap-[24px] mb-[99px]'>
           <button onClick={() => setTab('my-statistics')} className='flex items-center gap-[4px]'>
             <Icons.statsIcon stroke="#ffffff80" />
@@ -68,7 +68,7 @@ const Card = ({tab, setTab}) => {
             </div>
           </div>
 
-          <Image src={'/click.png'} width={58} height={58} className='flex-shrink-0' />
+          <Image alt='click photo' src={'/click.png'} width={58} height={58} className='flex-shrink-0' />
         </div>
       </div>
       <div className='mb-[24px]'>

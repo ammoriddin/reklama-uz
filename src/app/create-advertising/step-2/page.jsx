@@ -1,6 +1,3 @@
-"use server"
-
-import React from 'react'
 import AddAdvertising from '@/components/add-advertising'
 import AdverTising from '@/components/advertising-sidebar'
 

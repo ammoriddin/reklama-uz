@@ -7,7 +7,7 @@ const UserMessage = () => {
 
         {/* profile photo */}
         <div className='w-[36px] h-[36px] flex-shrink-0'>
-            <Image className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
+            <Image alt='pepsi logo' className='w-full h-full object-cover rounded-[50%]' src={'/companys/pepsi.png'} width={36} height={36} />
         </div>
 
         <div>
